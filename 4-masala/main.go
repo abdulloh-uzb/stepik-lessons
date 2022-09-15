@@ -5,14 +5,16 @@ import "fmt"
 func main() {
 	var n int
 	fmt.Scan(&n)
-	sum := 0
+	array := []int{}
+	var a int
 	for i := 0; i < n; i++ {
-		var number int
-		fmt.Scan(&number)
-		if (number < 100 && number >= 10) && (number%8 == 0) {
-			sum += number
+		fmt.Scan(&a)
+		array = append(array, a)
+	}
+
+	for idx, item := range array {
+		if idx%2 == 0 {
+			fmt.Printf("%d ", item)
 		}
 	}
-	fmt.Print(sum)
-
 }
