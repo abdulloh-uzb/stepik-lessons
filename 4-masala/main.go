@@ -1,19 +1,18 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-
-	var a int // 643198
-	fmt.Scan(&a)
-	temp1 := (a / 100000) + ((a / 10000) % 10) + ((a % 10000) / 1000)
-	b := (a % 1000)
-	temp2 := (b / 100) + (b%100)/10 + (b % 10)
-	if temp1 == temp2 {
-		fmt.Print("YES")
-	} else {
-		fmt.Print("NO")
+	var n int
+	fmt.Scan(&n)
+	sum := 0
+	for i := 0; i < n; i++ {
+		var number int
+		fmt.Scan(&number)
+		if (number < 100 && number >= 10) && (number%8 == 0) {
+			sum += number
+		}
 	}
+	fmt.Print(sum)
+
 }

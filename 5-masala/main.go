@@ -1,17 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-
-	var year int
-	fmt.Scan(&year)
-
-	if (year%400 == 0) || (year%4 == 0 && year%100 != 0) {
-		fmt.Print("YES")
-	} else {
-		fmt.Print("NO")
+	var n, c, d int
+	fmt.Scan(&n, &c, &d)
+	var i int = 1
+	for i <= n {
+		if i%c == 0 && i%d != 0 {
+			fmt.Print(i)
+			break
+		}
+		i++
 	}
+
 }
