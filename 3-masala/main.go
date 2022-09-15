@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
-
-	fmt.Print("I like Go!")
+	var a int
+	fmt.Scan(&a)
+	fmt.Print(a * a)
 }
