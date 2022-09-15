@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var a, b string
-	fmt.Scan(&a, &b)
-	// fmt.Println(string(a[0]), b)
-	for _, item := range a {
-		for _, item2 := range b {
-			if string(item) == string(item2) {
-				fmt.Print(string(item), " ")
-			}
-		}
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+	var year int = 0
+	for a < c {
+
+		a += b * a / 100 //sum += p * sum / 100
+		year++
 	}
+	fmt.Println(year)
 }
