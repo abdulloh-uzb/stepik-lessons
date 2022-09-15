@@ -3,8 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var a int = 8
-	const b int = 10
-	a = a + b
-	fmt.Println(a)
+	var i int
+	fmt.Scan(&i)
+	if i > 0 {
+		fmt.Print("Число положительное")
+	} else if i == 0 {
+		fmt.Print("Ноль")
+	} else {
+		fmt.Print("Число отрицательное")
+	}
 }
